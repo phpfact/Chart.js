@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1 class="text-center">Chart.js</h1>
+    <a href="https://tobiasahlin.com/blog/chartjs-charts-to-get-you-started" class="text-center d-block">Source Code: https://tobiasahlin.com/blog/chartjs-charts-to-get-you-started</a>
+    <br><br><br><br><br>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                
+            <canvas id="line-chart" width="800" height="450"></canvas>
+
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <script>
+new Chart(document.getElementById("line-chart"), {
+  type: 'line',
+  data: {
+    labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+    datasets: [{ 
+        data: [86,114,106,106,107,111,133,221,783,2478],
+        label: "Africa",
+        borderColor: "#3e95cd",
+        fill: false
+      }, { 
+        data: [282,350,411,502,635,809,947,1402,3700,5267],
+        label: "Asia",
+        borderColor: "#8e5ea2",
+        fill: false
+      }, { 
+        data: [168,170,178,190,203,276,408,547,675,734],
+        label: "Europe",
+        borderColor: "#3cba9f",
+        fill: false
+      }, { 
+        data: [40,20,10,16,24,38,74,167,508,784],
+        label: "Latin America",
+        borderColor: "#e8c3b9",
+        fill: false
+      }, { 
+        data: [6,3,2,2,7,26,82,172,312,433],
+        label: "North America",
+        borderColor: "#c45850",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'World population per region (in millions)'
+    }
+  }
+});
+    </script>
+
+  </body>
+</html>
